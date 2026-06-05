@@ -1,0 +1,26 @@
+import { test, expect} from '@playwright/test';
+
+test('verify the check boxes', async ({ page }) => {
+
+    await page.goto('https://qa-practice.razvanvancea.ro/checkboxes.html');
+
+    /*const checkboxes = page.locator('input[type="checkbox"]');
+    const count = await checkboxes.count();
+    expect(count).toBeGreaterThanOrEqual(2);
+
+    await checkboxes.nth(0).check();
+    await expect(checkboxes.nth(0)).toBeChecked();
+
+    await checkboxes.nth(1).check();
+    await expect(checkboxes.nth(1)).toBeChecked();*/
+
+    const checkbox = await page.locator(`(//input[@type="checkbox"])[1]`);
+    await checkbox.check();
+    await expect(checkbox).toBeChecked();
+
+    const checkboxes = await page.locator(`(//input[@type="checkbox"])[2]`);
+    await checkboxes.check();
+    await expect(checkboxes).toBeChecked();
+});
+
+
