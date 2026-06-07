@@ -32,7 +32,7 @@ test(' verify clicking on check boxes', async ({page})=>{
 
 });
 
-test('verify checkboxes third test',async ({page})=>{
+test('verify checkbox third test',async ({page})=>{
 
     await page.goto('https://commitquality.com/practice-general-components');
 
