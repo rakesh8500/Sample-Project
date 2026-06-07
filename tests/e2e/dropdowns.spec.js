@@ -14,4 +14,16 @@ test.describe('verify dropdowns in orange HRM', () => {
     await loginPage.verifyDropdowns();
 
   });
+
+
+  test('testing the dropdowns', async ({ page }) => {
+
+    await page.goto('https://commitquality.com/practice-general-components');
+    //const dropdwn = page.locator('div.dropdowns select');
+    const dropdwn = page.locator('//div[@class="dropdowns"]//select');
+    await expect(dropdwn).toBeVisible({ timeout: 5000 });
+    await dropdwn.selectOption({ label: 'Option 1' });
+    await expect(dropdwn).toHaveValue('option1');
+
+  })
 });
