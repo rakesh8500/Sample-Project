@@ -18,7 +18,7 @@ test('verify the check boxes', async ({ page }) => {
 });
 
 
-test(' verify clicking on check boxes', async ({page})=>{
+test(' verify clicking on check box', async ({page})=>{
    
     await page.goto('https://qa-practice.razvanvancea.ro/checkboxes.html');
 
